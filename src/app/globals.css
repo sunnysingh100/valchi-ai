@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans:
+    var(--font-inter), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Valchy AI Light Theme Palette */
+  --color-valchy-bg: #e2ecf6; /* Very light blue/grey base from screenshot */
+  --color-valchy-surface: #ffffff; /* White cards */
+  --color-valchy-border: #e5e7eb;
+
+  --color-valchy-text: #111827; /* Dark black/grey text */
+  --color-valchy-text-muted: #4b5563; /* Medium grey text */
+
+  --color-primary-blue: #3b82f6; /* Accent blue from mockups */
+  --color-primary-dark: #1f2937; /* Very dark grey/black for buttons */
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: var(--color-valchy-bg);
+  --foreground: var(--color-valchy-text);
+  color-scheme: light;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--color-primary-blue);
+  color: white;
 }
