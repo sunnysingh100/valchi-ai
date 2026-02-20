@@ -52,9 +52,9 @@ export const metadata: Metadata = {
     images: ["/twitter-image.png"], // Fallback available.
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
   },
   alternates: {
     canonical: "/",
