@@ -54,8 +54,8 @@ export function Navbar() {
             </span>
           </Link>
           <Link
-            href="#"
-            className="hidden sm:inline-flex items-center gap-1 px-4 py-1.5 rounded-full bg-valchy-text text-white text-xs font-medium hover:bg-gray-800 transition-colors"
+            href="https://valchy.ai/hiring"
+            className="hidden sm:inline-flex items-center gap-1 px-4 py-1.5 rounded-full bg-[#2d3138] text-white text-xs font-semibold hover:-translate-y-0.5 transition-transform duration-200"
           >
             We&apos;re Hiring <span className="text-gray-400 ml-1">›</span>
           </Link>
@@ -68,7 +68,7 @@ export function Navbar() {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-sm font-medium text-gray-700 hover:text-black transition-colors"
+                  className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -79,7 +79,7 @@ export function Navbar() {
             href="https://calendar.app.google/nqoBqqrueUP4PQ2b6"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2.5 rounded-full bg-primary-dark hover:bg-black text-white text-sm font-medium transition-all shadow-sm"
+            className="px-6 py-2.5 rounded-full bg-[#2d3138] hover:bg-black text-white text-sm font-semibold transition-all shadow-[0_6px_12px_rgba(100,160,210,0.3)] hover:-translate-y-0.5"
           >
             Book a Demo
           </Link>

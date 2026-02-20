@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#c8e4f2] via-[#e8f4f9] to-[#f0f8fc] pt-32 pb-8 sm:pt-40 sm:pb-12">
+      <section className="relative overflow-hidden bg-linear-to-b from-[#c8e4f2] via-[#e8f4f9] to-[#f0f8fc] pt-32 pb-8 sm:pt-40 sm:pb-12">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-7xl">
             <div className="mx-auto max-w-5xl px-4 text-center translate-y-0 opacity-100">
@@ -72,13 +72,13 @@ export default function ContactPage() {
       </section>
 
       {/* STEPS SECTION */}
-      <section className="relative bg-gradient-to-b from-[#f0f8fc] to-[#f0f8fc] py-4 sm:py-2">
+      <section className="relative bg-linear-to-b from-[#f0f8fc] to-[#f0f8fc] py-4 sm:py-2">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-7xl">
             <div className="mx-auto max-w-5xl px-4 translate-y-0 opacity-100">
               <div className="flex items-center justify-center gap-2 sm:gap-4">
                 <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#64a0d2] to-[#5b9fd4] shadow-lg sm:h-8 sm:w-8">
+                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-linear-to-br from-[#64a0d2] to-[#5b9fd4] shadow-lg sm:h-8 sm:w-8">
                     <span className="text-xs font-bold text-white sm:text-sm">
                       1
                     </span>
@@ -105,7 +105,7 @@ export default function ContactPage() {
       </section>
 
       {/* MAIN CONTENT GRID */}
-      <section className="relative bg-gradient-to-b from-[#f0f8fc] via-white to-white pt-6 pb-28 lg:pb-24">
+      <section className="relative bg-linear-to-b from-[#f0f8fc] via-white to-white pt-6 pb-28 lg:pb-24">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-7xl">
             <div className="mx-auto max-w-7xl px-4">
@@ -129,7 +129,7 @@ export default function ContactPage() {
                       </p>
                       <div className="space-y-3 sm:space-y-4">
                         <div className="flex gap-3 sm:gap-4">
-                          <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#64a0d2] to-[#5b9fd4] sm:h-6 sm:w-6">
+                          <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#64a0d2] to-[#5b9fd4] sm:h-6 sm:w-6">
                             <svg
                               className="h-3 w-3 text-white sm:h-3.5 sm:w-3.5"
                               fill="none"
@@ -156,7 +156,7 @@ export default function ContactPage() {
                         </div>
 
                         <div className="flex gap-3 sm:gap-4">
-                          <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#64a0d2] to-[#5b9fd4] sm:h-6 sm:w-6">
+                          <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#64a0d2] to-[#5b9fd4] sm:h-6 sm:w-6">
                             <svg
                               className="h-3 w-3 text-white sm:h-3.5 sm:w-3.5"
                               fill="none"
@@ -183,7 +183,7 @@ export default function ContactPage() {
                         </div>
 
                         <div className="flex gap-3 sm:gap-4">
-                          <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#64a0d2] to-[#5b9fd4] sm:h-6 sm:w-6">
+                          <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#64a0d2] to-[#5b9fd4] sm:h-6 sm:w-6">
                             <svg
                               className="h-3 w-3 text-white sm:h-3.5 sm:w-3.5"
                               fill="none"
@@ -218,7 +218,7 @@ export default function ContactPage() {
                   </div>
 
                   {/* Other Ways to Reach Us Card */}
-                  <div className="rounded-2xl border-2 border-blue-200/60 bg-gradient-to-br from-[#c8e4f2] via-[#e8f4f9] to-white p-5 shadow-[0_10px_40px_rgba(100,160,210,0.12)] sm:rounded-3xl sm:p-8">
+                  <div className="rounded-2xl border-2 border-blue-200/60 bg-linear-to-br from-[#c8e4f2] via-[#e8f4f9] to-white p-5 shadow-[0_10px_40px_rgba(100,160,210,0.12)] sm:rounded-3xl sm:p-8">
                     <h3 className="mb-4 text-lg font-bold text-gray-950 sm:mb-5 sm:text-xl">
                       Other Ways to Reach Us
                     </h3>
@@ -267,7 +267,7 @@ export default function ContactPage() {
                   className="hidden lg:sticky lg:top-8 lg:block"
                 >
                   <div className="overflow-hidden rounded-2xl border-2 border-blue-200/60 bg-white shadow-[0_10px_40px_rgba(100,160,210,0.12)] sm:rounded-3xl">
-                    <div className="bg-gradient-to-r from-[#64a0d2] to-[#5b9fd4] px-5 py-4 sm:px-8 sm:py-6">
+                    <div className="bg-linear-to-r from-[#64a0d2] to-[#5b9fd4] px-5 py-4 sm:px-8 sm:py-6">
                       <h3 className="mb-1 text-xl font-bold text-white sm:mb-2 sm:text-2xl">
                         Book Your Call
                       </h3>
@@ -281,7 +281,7 @@ export default function ContactPage() {
                     >
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="p-5 text-center sm:p-8">
-                          <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#64a0d2] to-[#5b9fd4] shadow-xl sm:mb-6 sm:h-20 sm:w-20">
+                          <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-linear-to-br from-[#64a0d2] to-[#5b9fd4] shadow-xl sm:mb-6 sm:h-20 sm:w-20">
                             <svg
                               className="h-8 w-8 text-white sm:h-10 sm:w-10"
                               fill="none"
@@ -309,7 +309,7 @@ export default function ContactPage() {
                             href="https://calendar.app.google/nqoBqqrueUP4PQ2b6"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#64a0d2] via-[#5b9fd4] to-[#4a8fc9] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(100,160,210,0.35)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_12px_35px_rgba(100,160,210,0.45)] sm:gap-3 sm:px-10 sm:py-5 sm:text-lg"
+                            className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-linear-to-r from-[#64a0d2] via-[#5b9fd4] to-[#4a8fc9] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(100,160,210,0.35)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_12px_35px_rgba(100,160,210,0.45)] sm:gap-3 sm:px-10 sm:py-5 sm:text-lg"
                           >
                             <svg
                               className="h-5 w-5 sm:h-6 sm:w-6"
@@ -387,12 +387,12 @@ export default function ContactPage() {
 
       {/* MOBILE FLOATING CTA */}
       <div className="fixed right-0 bottom-0 left-0 z-50 lg:hidden">
-        <div className="border-t-2 border-blue-200/60 bg-gradient-to-t from-white via-white to-white/95 p-4 shadow-[0_-10px_40px_rgba(100,160,210,0.2)] backdrop-blur-md">
+        <div className="border-t-2 border-blue-200/60 bg-linear-to-t from-white via-white to-white/95 p-4 shadow-[0_-10px_40px_rgba(100,160,210,0.2)] backdrop-blur-md">
           <Link
             href="https://calendar.app.google/nqoBqqrueUP4PQ2b6"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#64a0d2] via-[#5b9fd4] to-[#4a8fc9] px-6 py-4 text-base font-bold text-white shadow-[0_10px_30px_rgba(100,160,210,0.4)] transition-all duration-500 hover:shadow-[0_12px_35px_rgba(100,160,210,0.5)] active:scale-[0.98]"
+            className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-linear-to-r from-[#64a0d2] via-[#5b9fd4] to-[#4a8fc9] px-6 py-4 text-base font-bold text-white shadow-[0_10px_30px_rgba(100,160,210,0.4)] transition-all duration-500 hover:shadow-[0_12px_35px_rgba(100,160,210,0.5)] active:scale-[0.98]"
           >
             <svg
               className="h-5 w-5"

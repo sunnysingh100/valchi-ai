@@ -21,7 +21,7 @@ export function Footer() {
                   fill="currentColor"
                 />
               </svg>
-              <span className="text-2xl font-bold tracking-tight text-black">
+              <span className="text-xl font-semibold tracking-tight text-black">
                 Valchy AI
               </span>
             </Link>
@@ -34,7 +34,7 @@ export function Footer() {
           {/* Company Links */}
           <div>
             <h3 className="text-black font-semibold mb-4 text-lg">Company</h3>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-3 text-sm">
               <li>
                 <Link
                   href="/about"
@@ -73,7 +73,7 @@ export function Footer() {
           {/* Contact Links */}
           <div>
             <h3 className="text-black font-semibold mb-4 text-lg">Contacts</h3>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-3 text-sm">
               <li>
                 <a
                   href="mailto:valchyai@gmail.com"

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import {Copy, Activity, Phone} from "lucide-react";
+import {motion} from "framer-motion";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 
 export default function Home() {
@@ -9,16 +10,19 @@ export default function Home() {
     <div className="flex flex-col min-h-screen pt-20">
       {/* HERO SECTION */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 px-6 overflow-hidden flex flex-col items-center">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-blue-100 via-valchy-bg to-valchy-bg -z-10" />
+        {/* Background Grid and Gradient */}
+        <div className="absolute inset-0 bg-white -z-20" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(100,160,210,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(100,160,210,0.03)_1px,transparent_1px)] bg-size-[64px_64px] mask-[radial-gradient(ellipse_at_center,transparent_20%,white)] pointer-events-none" />
+        <div className="absolute top-0 inset-x-0 h-full bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(120,119,198,0.2),rgba(255,255,255,0))] -z-10 pointer-events-none" />
 
-        <div className="container mx-auto text-center relative z-10 w-full max-w-7xl flex flex-col items-center">
+        <div className="container mx-auto text-center relative z-10 w-full max-w-[1400px] flex flex-col items-center">
           {/* Main Headline */}
-          <h1 className="text-6xl md:text-[5.5rem] font-black tracking-tight leading-[1.1] text-valchy-text mb-8">
+          <h1 className="mb-5 text-5xl leading-[1.1] font-extrabold text-[#2d3138] sm:mb-8 sm:text-6xl lg:text-7xl text-center">
             BULGARIA&apos;S <br /> #1 AI AGENCY
           </h1>
 
           {/* Subtext */}
-          <p className="text-xl md:text-[1.35rem] text-valchy-text-muted max-w-2xl mx-auto mb-12 font-medium">
+          <p className="mx-auto mb-7 max-w-2xl px-2 text-base leading-relaxed font-normal text-gray-700 sm:mb-10 sm:px-0 sm:text-lg text-center">
             We specialize in building chat, voice and email agents to automate
             up-to 80% of your customer support processes.
           </p>
@@ -27,26 +31,26 @@ export default function Home() {
           <Link
             href="https://calendar.app.google/nqoBqqrueUP4PQ2b6"
             target="_blank"
-            className="px-8 py-4 rounded-full bg-valchy-text hover:bg-black text-white font-semibold transition-all hover:scale-105 shadow-xl mb-24 z-20"
+            className="inline-block w-full max-w-sm cursor-pointer rounded-full border border-gray-300 bg-white px-7 py-4 text-lg font-semibold text-gray-900 shadow-[0_6px_12px_rgba(120,180,220,0.25),0_3px_6px_rgba(120,180,220,0.15)] transition-all duration-300 hover:translate-y-[-1px] hover:bg-gray-50 hover:shadow-[0_7px_14px_rgba(100,160,210,0.3),0_3px_7px_rgba(100,160,210,0.18)] sm:w-auto sm:max-w-none sm:px-10 sm:py-5 sm:text-xl relative z-30 mb-20"
           >
             Book a Demo
           </Link>
 
           {/* Floating Mockups Container */}
-          <div className="w-full relative h-[400px] hidden lg:block -mt-40 pointer-events-none">
+          <div className="w-full relative h-[300px] hidden xl:block pointer-events-none -mt-40">
             {/* Left Mockup (Code Editor) */}
-            <div className="absolute left-0 top-10 w-[420px] bg-[#f9f9f9] rounded-2xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-gray-200/50 overflow-hidden pointer-events-auto hover:-translate-y-2 transition-transform duration-500">
-              <div className="h-10 border-b border-gray-200 flex items-center px-4 gap-2 bg-[#f0f0f0]">
+            <div className="absolute top-10 left-12 hidden w-[320px] xl:block overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_20px_60px_rgba(100,160,210,0.25)] pointer-events-auto hover:-translate-y-2 transition-transform duration-500">
+              <div className="h-10 border-b border-gray-200/80 flex items-center px-4 gap-2 bg-[#f8fafc]/80">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-400" />
                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
                   <div className="w-3 h-3 rounded-full bg-green-400" />
                 </div>
-                <div className="mx-auto flex items-center gap-1.5 text-xs text-gray-500 font-medium">
-                  app.js
+                <div className="mx-auto flex items-center gap-1.5 text-[10px] text-gray-500 font-medium mr-16">
+                  <Activity size={10} /> app.js
                 </div>
               </div>
-              <div className="p-6 text-xs font-mono leading-relaxed bg-[#f9f9f9]">
+              <div className="p-6 text-[10px] sm:text-xs font-mono leading-relaxed bg-white">
                 <p>
                   <span className="text-gray-500">import</span>{" "}
                   <span className="text-blue-500">React</span>{" "}
@@ -77,16 +81,14 @@ export default function Home() {
                 </p>
                 <p>&#125;</p>
                 <br />
-                {/* Save 85% costs */}
-                {/* Automate tasks */}
-                <br />
+                <p className="text-gray-400 italic">{/* Save 85% costs */}</p>
+                <p className="text-gray-400 italic">{/* Automate tasks */}</p>
                 <p>
                   <span className="text-gray-500">export default</span>{" "}
                   <span className="text-blue-500">AutomateWorkflow</span>;
                 </p>
-
                 <div className="mt-4 flex justify-end">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-100 text-blue-600 rounded-full font-sans text-[10px] font-semibold">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 text-blue-600 rounded-full font-sans text-[10px] font-semibold bg-blue-50 border border-blue-200">
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
                     Building...
                   </div>
@@ -95,23 +97,24 @@ export default function Home() {
             </div>
 
             {/* Right Mockup (Dashboard) */}
-            <div className="absolute right-0 top-10 w-[420px] bg-white rounded-2xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-gray-200/50 overflow-hidden pointer-events-auto hover:-translate-y-2 transition-transform duration-500">
+            <div className="absolute top-10 right-12 hidden w-[320px] xl:block overflow-hidden rounded-2xl bg-white shadow-[0_20px_60px_rgba(100,160,210,0.4)] pointer-events-auto hover:-translate-y-2 transition-transform duration-500 border border-gray-100">
               <div className="h-10 border-b border-gray-100 flex items-center px-4 gap-2">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-400" />
                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
                   <div className="w-3 h-3 rounded-full bg-green-400" />
                 </div>
-                <div className="ml-4 flex items-center gap-1.5 w-64 h-6 border border-gray-100 rounded-md bg-gray-50 px-2 text-[10px] text-gray-400">
-                  <Activity size={10} /> dashboard.app
+                <div className="ml-4 flex items-center justify-center gap-1.5 w-48 h-6 border border-gray-100 rounded-md bg-[#f8fafc] px-2 text-[10px] text-gray-400">
+                  <span className="text-green-500 text-[8px]">●</span>{" "}
+                  dashboard.app
                 </div>
               </div>
-              <div className="p-4 bg-[#f8fafc]">
+              <div className="p-4 bg-white">
                 {/* Top skeleton */}
-                <div className="bg-white border border-gray-100 rounded-xl p-3 mb-3 flex items-center justify-between shadow-sm">
+                <div className="bg-white border border-gray-100 rounded-xl p-3 mb-3 flex items-center justify-between shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
                   <div className="space-y-1.5">
-                    <div className="w-24 h-2.5 bg-gray-200 rounded-full" />
-                    <div className="w-32 h-2 bg-gray-100 rounded-full" />
+                    <div className="w-20 h-2.5 bg-gray-200 rounded-full" />
+                    <div className="w-28 h-2 bg-gray-100 rounded-full" />
                   </div>
                   <div className="flex gap-1">
                     <div className="w-2 h-2 rounded-full bg-gray-200" />
@@ -121,34 +124,34 @@ export default function Home() {
 
                 {/* Metric Cards */}
                 <div className="grid grid-cols-2 gap-3 mb-3">
-                  <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
-                    <div className="text-2xl font-bold text-blue-600 mb-1">
+                  <div className="bg-[#f8fafc] border border-gray-100/80 rounded-xl p-3">
+                    <div className="text-xl font-bold text-[#0f172a] mb-1">
                       85%
                     </div>
-                    <div className="text-[10px] text-gray-400 font-medium">
+                    <div className="text-[9px] text-gray-500 font-medium">
                       Cost Saved
                     </div>
                   </div>
-                  <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
-                    <div className="text-2xl font-bold text-blue-600 mb-1">
+                  <div className="bg-[#f8fafc] border border-gray-100/80 rounded-xl p-3">
+                    <div className="text-xl font-bold text-[#0f172a] mb-1">
                       3x
                     </div>
-                    <div className="text-[10px] text-gray-400 font-medium">
+                    <div className="text-[9px] text-gray-500 font-medium">
                       ROI Growth
                     </div>
                   </div>
                 </div>
 
                 {/* Chart Card */}
-                <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm relative overflow-hidden h-28 flex items-end justify-between px-6 pt-8 pb-4">
-                  <div className="w-8 h-8 rounded-sm bg-blue-300 relative z-10" />
-                  <div className="w-8 h-12 rounded-sm bg-blue-500 relative z-10" />
-                  <div className="w-8 h-10 rounded-sm bg-blue-400 relative z-10" />
-                  <div className="w-8 h-16 rounded-sm bg-blue-600 relative z-10" />
+                <div className="bg-white border border-gray-100 rounded-xl p-4 relative overflow-hidden h-24 flex items-end justify-between px-4 pt-6 pb-3 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
+                  <div className="w-6 h-6 rounded-t-sm bg-blue-200 relative z-10" />
+                  <div className="w-6 h-10 rounded-t-sm bg-blue-400 relative z-10" />
+                  <div className="w-6 h-8 rounded-t-sm bg-blue-300 relative z-10" />
+                  <div className="w-6 h-14 rounded-t-sm bg-blue-600 relative z-10" />
 
-                  <div className="absolute bottom-2 right-2 z-20">
-                    <div className="inline-flex items-center gap-1 px-2 py-0.5 bg-blue-50 border border-blue-100 text-blue-600 rounded-full text-[9px] font-bold">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                  <div className="absolute top-2 right-2 z-20">
+                    <div className="inline-flex items-center gap-1 px-2 py-0.5 bg-blue-50 border border-blue-200 text-blue-600 rounded-full text-[8px] font-bold">
+                      <span className="text-green-500 font-black">✓</span>
                       Live
                     </div>
                   </div>
@@ -160,33 +163,53 @@ export default function Home() {
       </section>
 
       {/* TRUSTED BY TICKER */}
-      <section className="py-10 border-t border-valchy-border bg-valchy-bg overflow-hidden flex items-center">
-        <div className="container mx-auto px-6 flex items-center justify-center gap-8 md:gap-16 w-full">
-          <span className="text-sm font-semibold text-valchy-text-muted whitespace-nowrap">
-            Trusted By Top Brands:
-          </span>
-          <div className="flex items-center gap-8 md:gap-16 opacity-60 grayscale filter">
-            {/* Approximations for logos to match screenshot */}
-            <span className="text-xl font-bold tracking-tighter">
-              transcard
+      <section className="py-8 border-y border-gray-100 bg-[#f8fafc] overflow-hidden flex items-center relative">
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-[#f8fafc] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-[#f8fafc] to-transparent z-10 pointer-events-none" />
+
+        <div className="flex items-center w-full">
+          <div className="px-8 whitespace-nowrap z-20 bg-[#f8fafc]">
+            <span className="text-sm font-semibold text-gray-500/80">
+              Trusted By Top Brands:
             </span>
-            <span className="text-xl font-serif italic font-bold">Pulse</span>
-            <span className="text-xl font-black italic uppercase tracking-wider">
-              ZARIMEX
-            </span>
-            <span className="text-xl font-medium tracking-tight flex items-center">
-              <Copy size={18} className="mr-1" />
-              FlexCost
-            </span>
-            <span className="text-xl font-serif text-gray-500">
-              Nova Translate
-            </span>
-            <span className="text-xl font-bold tracking-tighter flex items-center justify-center border-2 border-current rounded-full w-6 h-6 mr-1">
-              T
-            </span>
-            <span className="text-xl font-bold tracking-tighter leading-none">
-              trans.card
-            </span>
+          </div>
+
+          <div className="flex overflow-hidden w-full relative">
+            <motion.div
+              className="flex items-center gap-16 min-w-max pr-16"
+              initial={{x: 0}}
+              animate={{x: "-50%"}}
+              transition={{
+                duration: 30,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+            >
+              {[...Array(2)].map((_, idx) => (
+                <div key={idx} className="flex items-center gap-16">
+                  {/* Logos repeated to ensure seamless loop */}
+                  <span className="text-xl font-bold tracking-tighter opacity-40 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    transcard
+                  </span>
+                  <span className="text-xl font-serif italic font-bold opacity-40 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    Pulse
+                  </span>
+                  <span className="text-xl font-black italic uppercase tracking-wider opacity-40 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    ZARIMEX
+                  </span>
+                  <span className="text-xl font-medium tracking-tight flex items-center opacity-40 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <Copy size={18} className="mr-1" />
+                    FlexCost
+                  </span>
+                  <span className="text-xl font-serif text-gray-500 opacity-40 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    Nova Translate
+                  </span>
+                  <span className="text-xl font-bold tracking-tighter leading-none opacity-40 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    trans.card
+                  </span>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>
@@ -206,7 +229,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Chatbot Card */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] flex flex-col justify-between hover:shadow-[0_15px_40px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300">
               <div>
                 <h3 className="text-2xl font-bold text-valchy-text mb-3">
                   Chatbot Agents
@@ -232,7 +255,7 @@ export default function Home() {
             </div>
 
             {/* Email Card */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] flex flex-col justify-between hover:shadow-[0_15px_40px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300">
               <div>
                 <h3 className="text-2xl font-bold text-valchy-text mb-3">
                   Email Agents
@@ -269,7 +292,7 @@ export default function Home() {
             </div>
 
             {/* Voice Cards (Half width approx) */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] flex flex-col justify-between hover:shadow-[0_15px_40px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300">
               <div>
                 <h3 className="text-2xl font-bold text-valchy-text mb-3">
                   Voice Agents
@@ -298,7 +321,7 @@ export default function Home() {
             </div>
 
             {/* Custom Dev Card */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] flex flex-col justify-between hover:shadow-[0_15px_40px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300">
               <div>
                 <h3 className="text-2xl font-bold text-valchy-text mb-3">
                   Custom Web & AI Development
@@ -381,7 +404,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
             {/* Connecting dashed line (visible on desktop) */}
-            <div className="hidden md:block absolute top-[85%] left-[20%] right-[20%] h-[2px] border-b-[3px] border-dashed border-blue-200 -translate-y-1/2 -z-10" />
+            <div className="hidden md:block absolute bottom-[28px] left-[15%] right-[15%] h-[2px] border-b-[3px] border-dashed border-blue-200 -z-10" />
 
             {[
               {
@@ -460,6 +483,27 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA SECTION */}
+      <section className="py-32 md:py-40 bg-white text-center px-6 relative overflow-hidden flex flex-col items-center">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,var(--tw-gradient-stops))] from-blue-50 via-white to-white -z-10" />
+        <div className="container mx-auto max-w-4xl relative z-10 flex flex-col items-center">
+          <h2 className="text-4xl md:text-6xl font-black mb-6 text-[#0f172a] tracking-tight">
+            Ready to Transform Your Business with AI?
+          </h2>
+          <p className="text-xl text-[#475569] mb-12 max-w-2xl mx-auto font-medium">
+            Start your AI journey today. Get a free consultation and discover
+            how AI can drive real results.
+          </p>
+          <Link
+            href="https://calendar.app.google/nqoBqqrueUP4PQ2b6"
+            target="_blank"
+            className="px-10 py-5 rounded-full bg-[#2d3138] text-white font-bold text-lg hover:bg-black transition-all shadow-[0_8px_20px_rgba(100,160,210,0.4)] hover:shadow-[0_15px_30px_rgba(100,160,210,0.5)] hover:-translate-y-1"
+          >
+            Book Your Free Call
+          </Link>
         </div>
       </section>
     </div>
