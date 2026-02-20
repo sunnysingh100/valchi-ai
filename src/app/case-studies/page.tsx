@@ -1,45 +1,17 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
+import type {Metadata} from "next";
 
-const caseStudies = [
-  {
-    company: "Transcard",
-    description:
-      "Bulgaria's first credit card company needed to handle repetitive inquiries at scale. We built a chatbot with complex menu-driven flows from their...",
-    metric: "48% customer support automation",
-    logo: "/transcard-logo.png",
+export const metadata: Metadata = {
+  title: "Case Studies",
+  description:
+    "See how Valchy AI automates support and increases ROI for companies like Transcard, Pulse Fitness, Zarimex, FlexCost, and Nova Translate.",
+  alternates: {
+    canonical: "/case-studies",
   },
-  {
-    company: "Pulse Fitness",
-    description:
-      "Bulgaria's largest fitness chain (26 locations, 13x Fitness of the Year) needed to scale customer engagement. We're building a chatbot across web,...",
-    metric: "57% reduced customer support",
-    logo: "/pulse-fitness.png",
-  },
-  {
-    company: "Zarimex",
-    description:
-      "Bulgarian hunting & firearms retailer was drowning in 100+ daily calls. We built a chatbot targeting 50% reduction—achieved 90% instead, proving channel...",
-    metric: "90% call reduction",
-    logo: "/zarimex.png",
-  },
-  {
-    company: "FlexCost",
-    description:
-      "US-based window quoting software company and 7+ year client. We built their entire B2C and B2B configuration platform—and this year added voice...",
-    metric: "Voice-powered window configuration",
-    logo: "/flex-cost.webp",
-  },
-  {
-    company: "Nova Translate",
-    description:
-      "Bulgarian translation agency (15 years, 10K+ projects, clients like Binance & Revolut) needed to scale quoting. We built a chatbot that analyzes uploaded...",
-    metric: "AI-powered quoting system",
-    logo: "/nova-translate.png",
-  },
-];
+};
+
+import {caseStudies} from "@/data/case-studies";
 
 export default function CaseStudiesPage() {
   return (
@@ -103,7 +75,7 @@ export default function CaseStudiesPage() {
                     {study.description}
                   </p>
                   <Link
-                    href="#"
+                    href={`/case-studies/${study.slug}`}
                     className="inline-flex items-center text-blue-500 font-bold hover:text-blue-700 transition-colors"
                   >
                     Read case study

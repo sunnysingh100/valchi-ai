@@ -37,122 +37,128 @@ export default function Home() {
           </Link>
 
           {/* Floating Mockups Container */}
-          <div className="w-full relative h-[300px] hidden xl:block pointer-events-none -mt-40">
+          <div className="absolute inset-0 w-full hidden xl:block pointer-events-none z-0">
             {/* Left Mockup (Code Editor) */}
-            <div className="absolute top-10 left-12 hidden w-[320px] xl:block overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_20px_60px_rgba(100,160,210,0.25)] pointer-events-auto hover:-translate-y-2 transition-transform duration-500">
-              <div className="h-10 border-b border-gray-200/80 flex items-center px-4 gap-2 bg-[#f8fafc]/80">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
+            <div className="absolute top-1/2 -translate-y-1/2 left-0 2xl:left-4">
+              <div className="w-[320px] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_20px_60px_rgba(100,160,210,0.25)] pointer-events-auto hover:-translate-y-2 transition-transform duration-500">
+                <div className="h-10 border-b border-gray-200/80 flex items-center px-4 gap-2 bg-[#f8fafc]/80">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-400" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                    <div className="w-3 h-3 rounded-full bg-green-400" />
+                  </div>
+                  <div className="mx-auto flex items-center gap-1.5 text-[10px] text-gray-500 font-medium mr-16">
+                    <Activity size={10} /> app.js
+                  </div>
                 </div>
-                <div className="mx-auto flex items-center gap-1.5 text-[10px] text-gray-500 font-medium mr-16">
-                  <Activity size={10} /> app.js
-                </div>
-              </div>
-              <div className="p-6 text-[10px] sm:text-xs font-mono leading-relaxed bg-white">
-                <p>
-                  <span className="text-gray-500">import</span>{" "}
-                  <span className="text-blue-500">React</span>{" "}
-                  <span className="text-gray-500">from</span>{" "}
-                  <span className="text-green-600">&apos;react&apos;</span>;
-                </p>
-                <p>
-                  <span className="text-gray-500">import</span> &#123;{" "}
-                  <span className="text-blue-500">AIService</span> &#125;{" "}
-                  <span className="text-gray-500">from</span>{" "}
-                  <span className="text-green-600">&apos;./services&apos;</span>
-                  ;
-                </p>
-                <br />
-                <p>
-                  <span className="text-blue-600">const</span>{" "}
-                  <span className="text-blue-500">AutomateWorkflow</span>{" "}
-                  <span className="text-gray-500">= () =&gt;</span> &#123;
-                </p>
-                <p className="pl-4">
-                  <span className="text-blue-600">const</span> result{" "}
-                  <span className="text-gray-500">= await</span>{" "}
-                  <span className="text-blue-500">AIService.optimize</span>();
-                </p>
-                <p className="pl-4">
-                  <span className="text-gray-500">return</span> result.
-                  <span className="text-blue-400">savings</span>;
-                </p>
-                <p>&#125;</p>
-                <br />
-                <p className="text-gray-400 italic">{/* Save 85% costs */}</p>
-                <p className="text-gray-400 italic">{/* Automate tasks */}</p>
-                <p>
-                  <span className="text-gray-500">export default</span>{" "}
-                  <span className="text-blue-500">AutomateWorkflow</span>;
-                </p>
-                <div className="mt-4 flex justify-end">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 text-blue-600 rounded-full font-sans text-[10px] font-semibold bg-blue-50 border border-blue-200">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-                    Building...
+                <div className="p-6 text-[10px] sm:text-xs font-mono leading-relaxed bg-white">
+                  <p>
+                    <span className="text-gray-500">import</span>{" "}
+                    <span className="text-blue-500">React</span>{" "}
+                    <span className="text-gray-500">from</span>{" "}
+                    <span className="text-green-600">&apos;react&apos;</span>;
+                  </p>
+                  <p>
+                    <span className="text-gray-500">import</span> &#123;{" "}
+                    <span className="text-blue-500">AIService</span> &#125;{" "}
+                    <span className="text-gray-500">from</span>{" "}
+                    <span className="text-green-600">
+                      &apos;./services&apos;
+                    </span>
+                    ;
+                  </p>
+                  <br />
+                  <p>
+                    <span className="text-blue-600">const</span>{" "}
+                    <span className="text-blue-500">AutomateWorkflow</span>{" "}
+                    <span className="text-gray-500">= () =&gt;</span> &#123;
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-blue-600">const</span> result{" "}
+                    <span className="text-gray-500">= await</span>{" "}
+                    <span className="text-blue-500">AIService.optimize</span>();
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-gray-500">return</span> result.
+                    <span className="text-blue-400">savings</span>;
+                  </p>
+                  <p>&#125;</p>
+                  <br />
+                  <p className="text-gray-400 italic">{/* Save 85% costs */}</p>
+                  <p className="text-gray-400 italic">{/* Automate tasks */}</p>
+                  <p>
+                    <span className="text-gray-500">export default</span>{" "}
+                    <span className="text-blue-500">AutomateWorkflow</span>;
+                  </p>
+                  <div className="mt-4 flex justify-end">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 text-blue-600 rounded-full font-sans text-[10px] font-semibold bg-blue-50 border border-blue-200">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                      Building...
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Mockup (Dashboard) */}
-            <div className="absolute top-10 right-12 hidden w-[320px] xl:block overflow-hidden rounded-2xl bg-white shadow-[0_20px_60px_rgba(100,160,210,0.4)] pointer-events-auto hover:-translate-y-2 transition-transform duration-500 border border-gray-100">
-              <div className="h-10 border-b border-gray-100 flex items-center px-4 gap-2">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                </div>
-                <div className="ml-4 flex items-center justify-center gap-1.5 w-48 h-6 border border-gray-100 rounded-md bg-[#f8fafc] px-2 text-[10px] text-gray-400">
-                  <span className="text-green-500 text-[8px]">●</span>{" "}
-                  dashboard.app
-                </div>
-              </div>
-              <div className="p-4 bg-white">
-                {/* Top skeleton */}
-                <div className="bg-white border border-gray-100 rounded-xl p-3 mb-3 flex items-center justify-between shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                  <div className="space-y-1.5">
-                    <div className="w-20 h-2.5 bg-gray-200 rounded-full" />
-                    <div className="w-28 h-2 bg-gray-100 rounded-full" />
+            <div className="absolute top-1/2 -translate-y-1/2 right-0 2xl:right-4">
+              <div className="w-[320px] overflow-hidden rounded-2xl bg-white shadow-[0_20px_60px_rgba(100,160,210,0.4)] pointer-events-auto hover:-translate-y-2 transition-transform duration-500 border border-gray-100">
+                <div className="h-10 border-b border-gray-100 flex items-center px-4 gap-2">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-400" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                    <div className="w-3 h-3 rounded-full bg-green-400" />
                   </div>
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 rounded-full bg-gray-200" />
-                    <div className="w-2 h-2 rounded-full bg-gray-200" />
+                  <div className="ml-4 flex items-center justify-center gap-1.5 w-48 h-6 border border-gray-100 rounded-md bg-[#f8fafc] px-2 text-[10px] text-gray-400">
+                    <span className="text-green-500 text-[8px]">●</span>{" "}
+                    dashboard.app
                   </div>
                 </div>
+                <div className="p-4 bg-white">
+                  {/* Top skeleton */}
+                  <div className="bg-white border border-gray-100 rounded-xl p-3 mb-3 flex items-center justify-between shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
+                    <div className="space-y-1.5">
+                      <div className="w-20 h-2.5 bg-gray-200 rounded-full" />
+                      <div className="w-28 h-2 bg-gray-100 rounded-full" />
+                    </div>
+                    <div className="flex gap-1">
+                      <div className="w-2 h-2 rounded-full bg-gray-200" />
+                      <div className="w-2 h-2 rounded-full bg-gray-200" />
+                    </div>
+                  </div>
 
-                {/* Metric Cards */}
-                <div className="grid grid-cols-2 gap-3 mb-3">
-                  <div className="bg-[#f8fafc] border border-gray-100/80 rounded-xl p-3">
-                    <div className="text-xl font-bold text-[#0f172a] mb-1">
-                      85%
+                  {/* Metric Cards */}
+                  <div className="grid grid-cols-2 gap-3 mb-3">
+                    <div className="bg-[#f8fafc] border border-gray-100/80 rounded-xl p-3">
+                      <div className="text-xl font-bold text-[#0f172a] mb-1">
+                        85%
+                      </div>
+                      <div className="text-[9px] text-gray-500 font-medium">
+                        Cost Saved
+                      </div>
                     </div>
-                    <div className="text-[9px] text-gray-500 font-medium">
-                      Cost Saved
+                    <div className="bg-[#f8fafc] border border-gray-100/80 rounded-xl p-3">
+                      <div className="text-xl font-bold text-[#0f172a] mb-1">
+                        3x
+                      </div>
+                      <div className="text-[9px] text-gray-500 font-medium">
+                        ROI Growth
+                      </div>
                     </div>
                   </div>
-                  <div className="bg-[#f8fafc] border border-gray-100/80 rounded-xl p-3">
-                    <div className="text-xl font-bold text-[#0f172a] mb-1">
-                      3x
-                    </div>
-                    <div className="text-[9px] text-gray-500 font-medium">
-                      ROI Growth
-                    </div>
-                  </div>
-                </div>
 
-                {/* Chart Card */}
-                <div className="bg-white border border-gray-100 rounded-xl p-4 relative overflow-hidden h-24 flex items-end justify-between px-4 pt-6 pb-3 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                  <div className="w-6 h-6 rounded-t-sm bg-blue-200 relative z-10" />
-                  <div className="w-6 h-10 rounded-t-sm bg-blue-400 relative z-10" />
-                  <div className="w-6 h-8 rounded-t-sm bg-blue-300 relative z-10" />
-                  <div className="w-6 h-14 rounded-t-sm bg-blue-600 relative z-10" />
+                  {/* Chart Card */}
+                  <div className="bg-white border border-gray-100 rounded-xl p-4 relative overflow-hidden h-24 flex items-end justify-between px-4 pt-6 pb-3 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
+                    <div className="w-6 h-6 rounded-t-sm bg-blue-200 relative z-10" />
+                    <div className="w-6 h-10 rounded-t-sm bg-blue-400 relative z-10" />
+                    <div className="w-6 h-8 rounded-t-sm bg-blue-300 relative z-10" />
+                    <div className="w-6 h-14 rounded-t-sm bg-blue-600 relative z-10" />
 
-                  <div className="absolute top-2 right-2 z-20">
-                    <div className="inline-flex items-center gap-1 px-2 py-0.5 bg-blue-50 border border-blue-200 text-blue-600 rounded-full text-[8px] font-bold">
-                      <span className="text-green-500 font-black">✓</span>
-                      Live
+                    <div className="absolute top-2 right-2 z-20">
+                      <div className="inline-flex items-center gap-1 px-2 py-0.5 bg-blue-50 border border-blue-200 text-blue-600 rounded-full text-[8px] font-bold">
+                        <span className="text-green-500 font-black">✓</span>
+                        Live
+                      </div>
                     </div>
                   </div>
                 </div>

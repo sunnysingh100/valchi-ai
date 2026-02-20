@@ -1,6 +1,14 @@
-"use client";
-
 import Link from "next/link";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Ready to transform your business with AI? Book a free consultation or contact Valchy AI in Sofia, Bulgaria to discover how automation drives real results.",
+  alternates: {
+    canonical: "/contact",
+  },
+};
 
 export default function ContactPage() {
   return (

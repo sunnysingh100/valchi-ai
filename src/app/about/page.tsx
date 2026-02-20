@@ -1,4 +1,14 @@
 import Image from "next/image";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn about Valchy AI, founded by Valeri Sabev. We're a team of engineers in Sofia, Bulgaria, who ship production-ready chat and voice AI automation.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function AboutPage() {
   return (
