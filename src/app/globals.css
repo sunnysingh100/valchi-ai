@@ -32,3 +32,10 @@ body {
   background: var(--color-primary-blue);
   color: white;
 }
+
+@utility hide-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import {Copy, Activity, Phone} from "lucide-react";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
 
 export default function Home() {
   return (
@@ -358,76 +359,7 @@ export default function Home() {
       </section>
 
       {/* PROOF THAT SHIPS */}
-      <section className="py-24 relative overflow-hidden bg-white">
-        {/* Dot grid background from screenshot */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%233b82f6'/%3E%3C/svg%3E")`,
-            backgroundSize: "30px 30px",
-          }}
-        />
-
-        <div className="container mx-auto px-6 md:px-12 max-w-6xl relative z-10 text-center">
-          <h2 className="text-5xl md:text-6xl font-black mb-6 text-valchy-text">
-            Proof That Ships
-          </h2>
-          <p className="text-lg text-valchy-text-muted mb-16">
-            A mix of metrics and customer stories—built for production, not
-            demos.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                company: "Transcard",
-                subtitle: "Bulgaria's first credit card company",
-                metric: "48%",
-                desc: "customer support automation",
-                color: "bg-blue-100",
-                accent: "text-blue-600",
-              },
-              {
-                company: "Pulse Fitness",
-                subtitle: "Largest fitness chain in Bulgaria",
-                metric: "57%",
-                desc: "reduced customer support load",
-                color: "bg-purple-100",
-                accent: "text-purple-600",
-              },
-              {
-                company: "Zarimex",
-                subtitle: "Hunting & firearms retailer",
-                metric: "90%",
-                desc: "call reduction to human agents",
-                color: "bg-gray-100",
-                accent: "text-gray-600",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className={`${item.color} rounded-[2rem] p-8 border border-white/50 shadow-sm flex flex-col justify-between text-left min-h-[320px] relative overflow-hidden`}
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white/40 blur-3xl rounded-full" />
-                <div className="relative z-10">
-                  <div
-                    className={`${item.accent} text-6xl font-black tracking-tighter mb-2`}
-                  >
-                    {item.metric}
-                  </div>
-                  <p className="text-gray-800 font-medium mb-12 text-sm max-w-[200px]">
-                    {item.desc}
-                  </p>
-                </div>
-                <div className="relative z-10 bg-white/60 p-5 rounded-2xl backdrop-blur-sm border border-white/50">
-                  <h4 className="font-bold text-gray-900">{item.company}</h4>
-                  <p className="text-gray-500 text-xs mt-1">{item.subtitle}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CaseStudiesSection />
 
       {/* BENEFITS */}
       <section className="py-24 relative overflow-hidden bg-white">

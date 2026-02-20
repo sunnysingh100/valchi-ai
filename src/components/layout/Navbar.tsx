@@ -6,8 +6,8 @@ import {Menu, X} from "lucide-react";
 
 const NAV_LINKS = [
   {name: "About", href: "/about"},
-  {name: "Case Studies", href: "#"},
-  {name: "Contact", href: "#"},
+  {name: "Case Studies", href: "/case-studies"},
+  {name: "Contact", href: "/contact"},
 ];
 
 export function Navbar() {

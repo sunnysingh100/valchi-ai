@@ -45,7 +45,7 @@ export default function AboutPage() {
 
                         {/* 2024 */}
                         <div className="flex items-start gap-4 sm:gap-6">
-                          <div className="z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border-3 border-[#64a0d2] bg-white shadow-lg sm:h-14 sm:w-14 sm:border-4">
+                          <div className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-3 border-[#64a0d2] bg-white shadow-lg sm:h-14 sm:w-14 sm:border-4">
                             <span className="text-xs font-bold text-[#64a0d2] sm:text-sm">
                               2024
                             </span>
@@ -62,7 +62,7 @@ export default function AboutPage() {
 
                         {/* 2025 */}
                         <div className="flex items-start gap-4 sm:gap-6">
-                          <div className="z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border-3 border-[#64a0d2] bg-white shadow-lg sm:h-14 sm:w-14 sm:border-4">
+                          <div className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-3 border-[#64a0d2] bg-white shadow-lg sm:h-14 sm:w-14 sm:border-4">
                             <span className="text-xs font-bold text-[#64a0d2] sm:text-sm">
                               Today
                             </span>
@@ -108,7 +108,7 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 2: The Founder */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#f0f8fc] via-[#e8f4f9] to-[#f0f8fc] py-12 sm:py-20">
+      <section className="relative overflow-hidden bg-linear-to-b from-[#f0f8fc] via-[#e8f4f9] to-[#f0f8fc] py-12 sm:py-20">
         <div
           className="absolute inset-0"
           style={{
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 <div className="overflow-hidden rounded-2xl border-2 border-blue-200/60 bg-white shadow-[0_20px_60px_rgba(100,160,210,0.2)] sm:rounded-3xl">
                   {/* Mobile Founder Card */}
                   <div className="lg:hidden">
-                    <div className="relative flex flex-col items-center overflow-hidden bg-gradient-to-br from-[#64a0d2] via-[#5b9fd4] to-[#4a8fc9] p-6">
+                    <div className="relative flex flex-col items-center overflow-hidden bg-linear-to-br from-[#64a0d2] via-[#5b9fd4] to-[#4a8fc9] p-6">
                       <div className="absolute top-5 right-5 h-24 w-24 rounded-full bg-white/10 blur-2xl" />
                       <div className="absolute bottom-5 left-5 h-28 w-28 rounded-full bg-white/10 blur-3xl" />
                       <div className="relative z-10 mb-3 h-24 w-24 overflow-hidden rounded-2xl border-3 border-white/30 shadow-2xl">
@@ -194,7 +194,7 @@ export default function AboutPage() {
 
                   {/* Desktop Founder Card */}
                   <div className="hidden grid-cols-5 gap-0 lg:grid">
-                    <div className="relative col-span-2 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#64a0d2] via-[#5b9fd4] to-[#4a8fc9] p-10">
+                    <div className="relative col-span-2 flex flex-col items-center justify-center overflow-hidden bg-linear-to-br from-[#64a0d2] via-[#5b9fd4] to-[#4a8fc9] p-10">
                       <div className="absolute top-10 right-10 h-32 w-32 rounded-full bg-white/10 blur-2xl" />
                       <div className="absolute bottom-10 left-10 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
                       <div className="relative z-10 mb-5 h-40 w-40 overflow-hidden rounded-3xl border-4 border-white/30 shadow-2xl">
@@ -255,7 +255,7 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 3: Meet The Team */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#f0f8fc] via-[#e8f4f9] to-[#f0f8fc] py-12 sm:py-20">
+      <section className="relative overflow-hidden bg-linear-to-b from-[#f0f8fc] via-[#e8f4f9] to-[#f0f8fc] py-12 sm:py-20">
         <div className="absolute top-20 left-10 hidden h-32 w-32 animate-pulse rounded-full bg-blue-300/20 blur-3xl sm:block" />
         <div
           className="absolute right-10 bottom-20 hidden h-40 w-40 animate-pulse rounded-full bg-blue-200/20 blur-3xl sm:block"
@@ -308,7 +308,7 @@ export default function AboutPage() {
                     className="group relative h-full overflow-hidden rounded-2xl border-2 border-blue-200/60 bg-white shadow-[0_15px_50px_rgba(100,160,210,0.15)] transition-all duration-500 hover:-translate-y-2 hover:border-blue-300 hover:shadow-[0_25px_70px_rgba(100,160,210,0.3)] sm:rounded-3xl"
                   >
                     <div
-                      className={`relative bg-gradient-to-br ${member.colors} flex aspect-[16/9] items-center justify-center overflow-hidden`}
+                      className={`relative bg-linear-to-br ${member.colors} flex aspect-video items-center justify-center overflow-hidden`}
                     >
                       <div className="absolute inset-0">
                         <div className="absolute top-0 right-0 h-40 w-40 rounded-full bg-white/10 blur-3xl transition-transform duration-700 group-hover:translate-x-4 group-hover:-translate-y-4 group-hover:scale-150" />
@@ -350,7 +350,7 @@ export default function AboutPage() {
                           href={member.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#64a0d2] to-[#5b9fd4] shadow-md transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                          className="flex h-9 w-9 items-center justify-center rounded-full bg-linear-to-br from-[#64a0d2] to-[#5b9fd4] shadow-md transition-all duration-300 hover:scale-110 hover:shadow-lg"
                         >
                           <svg
                             className="h-4 w-4 text-white"
@@ -372,7 +372,7 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 4: Let's Build */}
-      <section className="relative bg-gradient-to-b from-[#f0f8fc] via-[#e8f4f9] to-white py-12 sm:py-20">
+      <section className="relative bg-linear-to-b from-[#f0f8fc] via-[#e8f4f9] to-white py-12 sm:py-20">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-7xl">
             <div className="mx-auto max-w-3xl px-4 text-center">
@@ -387,7 +387,7 @@ export default function AboutPage() {
                 href="https://calendar.app.google/nqoBqqrueUP4PQ2b6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#64a0d2] via-[#5b9fd4] to-[#4a8fc9] px-8 py-4 text-base font-semibold text-white shadow-[0_10px_30px_rgba(100,160,210,0.35)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_12px_35px_rgba(100,160,210,0.45)] sm:gap-3 sm:px-10 sm:py-5 sm:text-lg"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-linear-to-r from-[#64a0d2] via-[#5b9fd4] to-[#4a8fc9] px-8 py-4 text-base font-semibold text-white shadow-[0_10px_30px_rgba(100,160,210,0.35)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_12px_35px_rgba(100,160,210,0.45)] sm:gap-3 sm:px-10 sm:py-5 sm:text-lg"
               >
                 <span>Book a Call</span>
                 <svg

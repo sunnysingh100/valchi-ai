@@ -45,7 +45,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/case-studies"
                   className="text-valchy-text-muted hover:text-black transition-colors"
                 >
                   Case Studies
@@ -103,7 +103,10 @@ export function Footer() {
             <Link href="#" className="hover:text-black transition-colors">
               Terms of Use
             </Link>
-            <Link href="#" className="hover:text-black transition-colors">
+            <Link
+              href="/contact"
+              className="hover:text-black transition-colors"
+            >
               Contact Us
             </Link>
           </div>
